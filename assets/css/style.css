@@ -1,6 +1,52 @@
-@import "blog.css";
-@import "mobilestyle.css" (max-width: 700px);
+@import "card.css";
+@import "ad.css";
+@import "blogpost.css";
+@import "home.css";
 body {
     display:grid;
-    grid-template-columns: ;
+    grid-template-areas:
+        "header header header header"
+        "ad content content content"
+        "ad content content content"
+        "ad content content content"
+        "ad content content content"
+        "ad content content content"
+        "ad content content content"
+        "footer footer footer footer";
+}
+
+header {
+    border-color: red;
+    grid-area: header;
+}
+
+.ad-box {
+    border-color: blue;
+    grid-area: ad;
+}
+
+.content {
+    border-color: green;
+    grid-area: content;
+}
+
+@media (max-width: 320px) {
+    body {
+        display:grid;
+        grid-template-areas:
+            "header header header header"
+            "content content content content"
+            "content content content content"
+            "content content content content"
+            "content content content content"
+            "ad ad ad ad"
+            "ad ad ad ad"
+            "footer footer footer footer";
+    }
+}
+
+@media (min-width: 600px) and (max-width: 900px) {
+
+    
+    
 }
