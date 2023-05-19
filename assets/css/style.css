@@ -1,9 +1,13 @@
 @import "card.css";
 @import "ad.css";
 @import "blogpost.css";
-@import "home.css";
+ 
 body {
-    display:grid;
+    box-sizing: border-box;
+    display: grid;
+    grid-gap: 5px;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 250px;
     grid-template-areas:
         "header header header header"
         "ad content content content"
@@ -16,23 +20,63 @@ body {
 }
 
 header {
+    display: flex;
+    padding: 20px;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    border-style: solid;
+    border-radius: 5px;
     border-color: red;
     grid-area: header;
 }
 
+nav {
+    padding: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+nav li {
+    margin: 10px;
+    min-width: 60px;
+    text-align: center;
+    display: inline-block;
+    border-style: solid;
+    border-color: black;
+    padding: 10px;
+}
+
+footer {
+    display: grid;
+    grid-area: footer;
+}
+
 .ad-box {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-content: space-around;
+    gap: 5px 5px;
+    align-items: center;
+    border-style: solid;
+    border-radius: 5px;
     border-color: blue;
     grid-area: ad;
 }
 
 .content {
-    border-color: green;
-    grid-area: content;
+    font-size: 20px;
 }
 
-@media (max-width: 320px) {
+
+@media (max-width: 599px) {
     body {
         display:grid;
+        grid-template-columns: 90%;
+        grid-template-rows: 250px;
         grid-template-areas:
             "header header header header"
             "content content content content"
@@ -43,10 +87,12 @@ header {
             "ad ad ad ad"
             "footer footer footer footer";
     }
-}
-
-@media (min-width: 600px) and (max-width: 900px) {
-
+    .card {
+        border-style: solid;
+        border-radius: 5px;
+        border-color: yellow;
+        min-width: 80vw;
+        min-height: 30vh;
     
-    
+    }
 }
