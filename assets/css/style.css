@@ -10,12 +10,12 @@ body {
     grid-template-rows: 250px;
     grid-template-areas:
         "header header header header"
-        "ad content content content"
-        "ad content content content"
-        "ad content content content"
-        "ad content content content"
-        "ad content content content"
-        "ad content content content"
+        "content content content ad"
+        "content content content ad"
+        "content content content ad"
+        "content content content ad"
+        "content content content ad"
+        "content content content ad"
         "footer footer footer footer";
 }
 
